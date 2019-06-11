@@ -1,0 +1,7 @@
+# Memory leak
+GET http://localhost:5000/api/diagscenario/memleak/200000
+
+###
+
+# High CPU usage
+GET http://localhost:5000/api/diagscenario/highcpu/60000

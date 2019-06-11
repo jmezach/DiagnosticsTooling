@@ -1,0 +1,13 @@
+// See https://aka.ms/vscode-remote/containers for the
+// documentation about the devcontainer.json format
+{
+	"name": "C# (.NET Core Latest)",
+	"dockerFile": "Dockerfile",
+	"extensions": [
+		"ms-vscode.csharp",
+		"humao.rest-client"
+	],
+	"runArgs": [
+		"--cap-add", "SYS_PTRACE"
+	]
+}
