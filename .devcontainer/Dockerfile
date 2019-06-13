@@ -14,9 +14,9 @@ RUN apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install .NET Core Diagnostics Tools
-RUN dotnet tool install --global dotnet-counters --version 1.0.3-preview5.19251.2 \
-    && dotnet tool install --global dotnet-trace --version 1.0.3-preview5.19251.2 \
-    && dotnet tool install --global dotnet-dump --version 1.0.3-preview5.19251.2 \
+RUN dotnet tool install --global dotnet-counters --version 1.0.4-preview6.19311.1 --add-source https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json \
+    && dotnet tool install --global dotnet-trace --version 1.0.4-preview6.19311.1 --add-source https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json \
+    && dotnet tool install --global dotnet-dump --version 1.0.4-preview6.19311.1 --add-source https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json \
     && dotnet tool install -g dotnet-symbol
 
 # Set path and shell
