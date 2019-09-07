@@ -3,7 +3,7 @@
 # Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
 #-------------------------------------------------------------------------------------------------------------
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0.100-preview5
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0.100-preview9
 
 # Install git, process tools
 RUN apt-get update && apt-get -y install git procps libc6-dev
@@ -14,9 +14,9 @@ RUN apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install .NET Core Diagnostics Tools
-RUN dotnet tool install --global dotnet-counters --version 1.0.3-preview5.19251.2 \
-    && dotnet tool install --global dotnet-trace --version 1.0.3-preview5.19251.2 \
-    && dotnet tool install --global dotnet-dump --version 1.0.3-preview5.19251.2 \
+RUN dotnet tool install --global dotnet-counters --version 3.0.0-preview9.19454.1 \
+    && dotnet tool install --global dotnet-trace --version 3.0.0-preview9.19454.1 \
+    && dotnet tool install --global dotnet-dump --version 3.0.0-preview9.19454.1 \
     && dotnet tool install -g dotnet-symbol
 
 # Set path and shell
